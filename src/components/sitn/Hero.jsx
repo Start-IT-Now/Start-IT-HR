@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import bg from '../bg.png';
-import logo from '../logo.png';
 
 const Hero = () => {
   return (
@@ -14,22 +13,13 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
-      {/* Transparent Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-              <img src={logo}
-              alt="Start IT Now" 
-              className="px-60"          
-  />
-  
-
       {/* Foreground Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10 relative z-40">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-3xl text-white"
+          className="max-w-4xl text-white text-lg md:text-2xl"
         >
           Adopting new technologies can feel overwhelming, especially when you're
           focused on driving measurable business results. At Start IT Now, we make
@@ -37,7 +27,6 @@ const Hero = () => {
           solutions equipped with Workflow Automation, advanced AI Agents, flexible
           integrations, and expert guidance at every step.
         </motion.p>
-      </div>
       </div>
     </section>
   );

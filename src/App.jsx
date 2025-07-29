@@ -14,10 +14,7 @@ import Footer from '@/components/sitn/Footer';
 
 function App() {
   const handleFeatureClick = () => {
-    toast({
-      title: "🚧 Feature Coming Soon!",
-      description: "This feature isn't implemented yet—but don't worry! ",
-    });
+
   };
 
   return (

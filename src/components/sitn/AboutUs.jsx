@@ -10,7 +10,7 @@ const AboutUs = ({ onFeatureClick }) => {
   };
 
   return (
-    <section id="about" className="py-4 md:py-6 bg-white scroll-mt-24">
+    <section id="about" className="py-4 md:py-6 bg-white scroll-mt-18">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

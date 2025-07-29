@@ -34,7 +34,7 @@ const IntelligentSolutions = ({ onFeatureClick }) => {
   };
 
   return (
-    <section id="solutions" className="py-4 md:py-6 bg-white scroll-mt-18">
+    <section id="solutions" className="py-4 md:py-6 bg-white scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title" style={{ color: 'black' }}>Our Intelligent Solutions</h2>
         <div className="section-title-underline"></div>

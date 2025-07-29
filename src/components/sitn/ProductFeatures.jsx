@@ -27,7 +27,7 @@ const ProductFeatures = ({ onFeatureClick }) => {
   };
 
   return (
-<section id="features" className="py-4 md:py-6 bg-white scroll-mt-18">
+<section id="features" className="py-4 md:py-6 bg-white scroll-mt-20">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="section-title text-black !text-black">Product Features</h2>
     <div className="section-title-underline bg-[#0BC5EA]"></div>

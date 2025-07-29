@@ -25,7 +25,7 @@ const KeyBenefits = ({ onFeatureClick }) => {
   };
 
   return (
-    <section id="benefits" className="py-1 md:py-0 bg-white">
+    <section id="benefits" className="py-1 md:py-0 bg-white scroll-mt-24">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="section-title text-black !text-black">Key Benefits</h2>
         <div className="section-title-underline"></div>

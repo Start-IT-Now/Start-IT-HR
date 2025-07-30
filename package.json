@@ -7,8 +7,7 @@
     "start": "vite",
     "build": "npx vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "preinstall": "chmod +x ./node_modules/.bin/vite"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
@@ -16,7 +15,6 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
-    "ga4": "^0.0.0",
     "lucide-react": "^0.292.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

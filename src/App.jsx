@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Toaster } from '@/components/ui/toaster';
 import { toast } from '@/components/ui/use-toast';
+
+// Import your custom components
 import Header from '@/components/sitn/Header';
 import Hero from '@/components/sitn/Hero';
 import IntelligentSolutions from '@/components/sitn/IntelligentSolutions';
@@ -12,17 +14,36 @@ import Personas from '@/components/sitn/Personas';
 import AboutUs from '@/components/sitn/AboutUs';
 import Footer from '@/components/sitn/Footer';
 
-function App() {
-  const handleFeatureClick = () => {
+// GA4 Tracking
+import { initGA, trackPageview } from '@/components/sitn/ga4'; // Adjust path if needed
 
+function App() {
+  // Initialize GA4 and track the first page view
+  useEffect(() => {
+    initGA();
+    trackPageview(window.location.pathname);
+  }, []);
+
+  const handleFeatureClick = () => {
+    // Optional: Add event tracking here if needed
+    // Example:
+    // ReactGA.event({
+    //   category: 'Feature',
+    //   action: 'Click',
+    //   label: 'Feature Section',
+    // });
   };
 
   return (
     <HelmetProvider>
       <Helmet>
         <title>Start IT Now - HR Workflow Automation</title>
-        <meta name="description" content="Adopting new technologies can feel overwhelming. At Start IT Now, we make your digital adoption journey smooth and strategic." />
+        <meta
+          name="description"
+          content="Adopting new technologies can feel overwhelming. At Start IT Now, we make your digital adoption journey smooth and strategic."
+        />
       </Helmet>
+
       <div className="min-h-screen bg-[#0B0F29] text-white font-sans">
         <Header onFeatureClick={handleFeatureClick} />
         <main>

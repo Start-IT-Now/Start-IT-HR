@@ -215,7 +215,8 @@ export default defineConfig({
 				'@babel/parser',
 				'@babel/traverse',
 				'@babel/generator',
-				'@babel/types'
+				'@babel/types',
+				 'react-ga4' 
 			]
 		}
 	}

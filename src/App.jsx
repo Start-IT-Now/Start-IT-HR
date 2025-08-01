@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Toaster } from '@/components/ui/toaster';
-import { toast } from '@/components/ui/use-toast';
 
-// Import your custom components
 import Header from '@/components/sitn/Header';
 import Hero from '@/components/sitn/Hero';
 import IntelligentSolutions from '@/components/sitn/IntelligentSolutions';
@@ -14,28 +13,27 @@ import Personas from '@/components/sitn/Personas';
 import AboutUs from '@/components/sitn/AboutUs';
 import Footer from '@/components/sitn/Footer';
 
-// GA4 Tracking
-import { initGA, trackPageview } from '@/components/sitn/ga4'; // Adjust path if needed
+import { initGA, trackPageview } from '@/components/sitn/ga4';
 
-function App() {
-  // Initialize GA4 and track the first page view
+// Component to handle GA tracking on route change
+function GAListener({ children }) {
+  const location = useLocation();
+
   useEffect(() => {
-    initGA();
-    trackPageview(window.location.pathname);
-  }, []);
+    trackPageview(location.pathname);
+  }, [location]);
 
+  return children;
+}
+
+function AppContent() {
   const handleFeatureClick = () => {
-    // Optional: Add event tracking here if needed
-    // Example:
-    // ReactGA.event({
-    //   category: 'Feature',
-    //   action: 'Click',
-    //   label: 'Feature Section',
-    // });
+    // Example custom event tracking
+    // ReactGA.event({ category: 'Feature', action: 'Click', label: 'Feature Section' });
   };
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Start IT Now - HR Workflow Automation</title>
         <meta
@@ -58,6 +56,25 @@ function App() {
         <Footer onFeatureClick={handleFeatureClick} />
         <Toaster />
       </div>
+    </>
+  );
+}
+
+function App() {
+  useEffect(() => {
+    initGA();
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <Router>
+        <GAListener>
+          <Routes>
+            {/* You can add routes if you want, or just render main app */}
+            <Route path="*" element={<AppContent />} />
+          </Routes>
+        </GAListener>
+      </Router>
     </HelmetProvider>
   );
 }

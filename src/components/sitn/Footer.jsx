@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Phone, Globe, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
+import { FaPhoneAlt } from 'react-icons/fa';
+import { MdHelpOutline } from 'react-icons/md'; // ✅ Import this
 import logo from '../white-logo.png';
 
 const Footer = ({ onFeatureClick }) => {
@@ -14,20 +16,34 @@ const Footer = ({ onFeatureClick }) => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="text-lg text-gray-400 mb-6">A trustable AI solution where your data remains safe.</p>
-          <img src={logo} alt='Start IT Now' className='mx-auto'></img>
-          
+          <p className="text-lg text-gray-400 mb-6">
+            A trustable AI solution where your data remains safe.
+          </p>
+
+          <a href="https://www.startitnow.co.in" target="_blank" rel="noopener noreferrer">
+            <img src={logo} alt="Start IT Now" className="mx-auto" />
+          </a>
+
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-6 text-gray-300">
-            <a href="tel:+918431403016" className="flex items-center gap-2 hover:text-[#67E8F9] transition-colors">
+            <a
+              href="tel:+918431403016"
+              className="flex items-center gap-2 hover:text-[#67E8F9] transition-colors"
+            >
               <Phone size={18} />
               <span>+91-8431403016</span>
             </a>
-            <a href="https://www.startitnow.co.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#67E8F9] transition-colors">
-              <Globe size={18} />
-              <span>www.startitnow.co.in</span>
+
+            <a
+              href="https://forms.qntrlusercontent.com/external/publicform/a3d34ee06272ff2f77de1440feeccfecf3fb0cb4855540ae06278496b3e36e13d653f2cd503866811c417fb6bbe559d9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-[#67E8F9] transition-colors"
+            >
+              <MdHelpOutline size={18} />
+              <span>Help</span>
             </a>
           </div>
-          
+
           <div className="flex justify-center items-center gap-2 mb-8 text-gray-400">
             <MapPin size={18} />
             <span>Electronic City, Phase-2, Bengaluru - 560100, INDIA</span>
@@ -35,18 +51,22 @@ const Footer = ({ onFeatureClick }) => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button
-              onClick={onFeatureClick}
-              className="bg-[#2563EB] hover:bg-[#1E40AF] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-base"
+              onClick={() => window.open('https://www.startitnow.co.in/contact.php', '_blank')}
+              variant="blue"
+              size="lg"
+              className="flex items-center"
             >
-              <Phone className="mr-2 h-5 w-5" />
-              Get Started Today, Call us for Demonstration
+              <FaPhoneAlt className="mr-2 h-5 w-5" />
+              Contact Us
+
             </Button>
-            <Button
-              onClick={onFeatureClick}
-              variant="secondary"
+
+            <Button            
+              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScjUg8BPIZIjQRcz0p7vMQg0s1iMAPVgM3cEbqsnRQzTmaevA/viewform', '_blank')}
+              variant="blue"
               className="border-[#2563EB] hover:bg-[#1E40AF] hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-base"
             >
-              Customer Support
+              More Info
             </Button>
           </div>
 

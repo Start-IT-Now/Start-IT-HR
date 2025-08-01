@@ -216,7 +216,7 @@ export default defineConfig({
 				'@babel/traverse',
 				'@babel/generator',
 				'@babel/types',
-				 'react-ga4' 
+ 
 			]
 		}
 	}

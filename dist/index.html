@@ -1,15 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="generator" content="Start IT Now" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Start IT Now</title>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="generator" content="Start IT Now" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start IT Now</title>
 
-		<script type="module" crossorigin src="/assets/index-80da3e0c.js"></script>
-		<link rel="stylesheet" href="/assets/index-b67b7702.css">
-		<script type="module">
+  <!-- ✅ Google Analytics (GA4) Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HGGP2GV4R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-3HGGP2GV4R');
+  </script>
+  <script type="module" crossorigin src="/assets/index-af077759.js"></script>
+  <link rel="stylesheet" href="/assets/index-b67b7702.css">
+  <script type="module">
 window.onerror = (message, source, lineno, colno, errorObj) => {
 	const errorDetails = errorObj ? JSON.stringify({
 		name: errorObj.name,
@@ -27,7 +37,7 @@ window.onerror = (message, source, lineno, colno, errorObj) => {
 	}, '*');
 };
 </script>
-		<script type="module">
+  <script type="module">
 const observer = new MutationObserver((mutations) => {
 	for (const mutation of mutations) {
 		for (const addedNode of mutation.addedNodes) {
@@ -73,7 +83,7 @@ function handleViteOverlay(node) {
 	}
 }
 </script>
-		<script type="module">
+  <script type="module">
 const originalConsoleError = console.error;
 console.error = function(...args) {
 	originalConsoleError.apply(console, args);
@@ -98,7 +108,7 @@ console.error = function(...args) {
 	}, '*');
 };
 </script>
-		<script type="module">
+  <script type="module">
 const originalFetch = window.fetch;
 
 window.fetch = function(...args) {
@@ -136,10 +146,9 @@ window.fetch = function(...args) {
 		});
 };
 </script>
-	</head>
-
-	<body>
-		<div id="root"></div>
-		
-	</body>
+</head>
+<body>
+  <div id="root"></div>
+  
+</body>
 </html>

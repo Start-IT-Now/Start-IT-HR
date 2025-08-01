@@ -23,7 +23,7 @@ const Hero = () => {
         >
           Adopting new technologies can feel overwhelming, especially when you're
           focused on driving measurable business results. At Start IT Now, we make
-          your digital adoption journey smooth and strategic—offering tailored
+          your digital adoption journey smooth and strategic offering tailored
           solutions equipped with Workflow Automation, advanced AI Agents, flexible
           integrations, and expert guidance at every step.
         </motion.p>

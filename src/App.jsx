@@ -1,7 +1,7 @@
+// src/App.jsx
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { Toaster } from '@/components/ui/toaster';
 
 import Header from '@/components/sitn/Header';
 import Hero from '@/components/sitn/Hero';
@@ -13,9 +13,11 @@ import Personas from '@/components/sitn/Personas';
 import AboutUs from '@/components/sitn/AboutUs';
 import Footer from '@/components/sitn/Footer';
 
+import { Toaster } from '@/components/ui/toaster';
+
 import { initGA, trackPageview } from '@/components/sitn/ga4';
 
-// Component to handle GA tracking on route change
+// GA listener to track pageviews on route change
 function GAListener({ children }) {
   const location = useLocation();
 
@@ -28,8 +30,8 @@ function GAListener({ children }) {
 
 function AppContent() {
   const handleFeatureClick = () => {
-    // Example custom event tracking
-    // ReactGA.event({ category: 'Feature', action: 'Click', label: 'Feature Section' });
+    // You can add custom GA event tracking here if needed
+    // Example: window.gtag('event', 'feature_click', { feature: 'Hero Section' });
   };
 
   return (
@@ -45,7 +47,7 @@ function AppContent() {
       <div className="min-h-screen bg-[#0B0F29] text-white font-sans">
         <Header onFeatureClick={handleFeatureClick} />
         <main>
-          <Hero />
+          <Hero onFeatureClick={handleFeatureClick} />
           <IntelligentSolutions onFeatureClick={handleFeatureClick} />
           <KeyBenefits onFeatureClick={handleFeatureClick} />
           <ProductFeatures onFeatureClick={handleFeatureClick} />
@@ -70,7 +72,7 @@ function App() {
       <Router>
         <GAListener>
           <Routes>
-            {/* You can add routes if you want, or just render main app */}
+            {/* Wildcard route renders the entire app */}
             <Route path="*" element={<AppContent />} />
           </Routes>
         </GAListener>

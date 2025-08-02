@@ -62,7 +62,7 @@ const Footer = ({ onFeatureClick }) => {
             </Button>
 
             <Button            
-              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScjUg8BPIZIjQRcz0p7vMQg0s1iMAPVgM3cEbqsnRQzTmaevA/viewform', '_blank')}
+              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfUunDCgaB4eDQP-ADpV_qFgctArH8kLN_AdmRlRsfn8Abrew/viewform?usp=header', '_blank')}
               variant="blue"
               className="border-[#2563EB] hover:bg-[#1E40AF] hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-base"
             >

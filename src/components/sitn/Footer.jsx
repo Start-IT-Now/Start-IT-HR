@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Phone, MapPin } from 'lucide-react';
 import { FaPhoneAlt } from 'react-icons/fa';
-import { MdHelpOutline } from 'react-icons/md'; // ✅ Import this
+import { MdHelpOutline } from 'react-icons/md'; 
+import { FaFileAlt } from 'react-icons/fa';
 import logo from '../white-logo.png';
 
 const Footer = ({ onFeatureClick }) => {
@@ -44,10 +45,19 @@ const Footer = ({ onFeatureClick }) => {
             </a>
           </div>
 
-          <div className="flex justify-center items-center gap-2 mb-8 text-gray-400">
-            <MapPin size={18} />
-            <span>Electronic City, Phase-2, Bengaluru - 560100, INDIA</span>
-          </div>
+<div className="flex justify-center items-center gap-2 mb-8 text-gray-400 mt-1">
+  <MapPin size={18} />
+  <a
+    href="https://maps.app.goo.gl/WuabZch3XDEdJtS98"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    Kaggadasapura Main Road, Kondappa Layout,
+    Malleshpalya, C V Raman Nagar,
+    Bengaluru, Karnataka 560075
+  </a>
+</div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button
@@ -64,9 +74,11 @@ const Footer = ({ onFeatureClick }) => {
             <Button            
               onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfUunDCgaB4eDQP-ADpV_qFgctArH8kLN_AdmRlRsfn8Abrew/viewform?usp=header', '_blank')}
               variant="blue"
-              className="border-[#2563EB] hover:bg-[#1E40AF] hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-base"
+              size="lg"
+              className="flex items-center"
             >
-              More Info
+              < FaFileAlt className="mr-2 h-5 w-5" />
+              Download a White Paper
             </Button>
           </div>
 

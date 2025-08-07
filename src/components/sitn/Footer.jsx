@@ -47,16 +47,11 @@ const Footer = ({ onFeatureClick }) => {
 
 <div className="flex justify-center items-center gap-2 mb-8 text-gray-400 mt-1">
   <MapPin size={18} />
-  <a
-    href="https://maps.app.goo.gl/WuabZch3XDEdJtS98"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:underline"
-  >
+
     Kaggadasapura Main Road, Kondappa Layout,
     Malleshpalya, C V Raman Nagar,
     Bengaluru, Karnataka 560075
-  </a>
+
 </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">

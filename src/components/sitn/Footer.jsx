@@ -48,9 +48,8 @@ const Footer = ({ onFeatureClick }) => {
 <div className="flex justify-center items-center gap-2 mb-8 text-gray-400 mt-1">
   <MapPin size={18} />
 
-    Kaggadasapura Main Road, Kondappa Layout,
-    Malleshpalya, C V Raman Nagar,
-    Bengaluru, Karnataka 560075
+    Kaggadasapura Main Road, C V Raman Nagar,
+    Bengaluru, Karnataka.
 
 </div>
 

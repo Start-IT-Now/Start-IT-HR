@@ -49,9 +49,9 @@ function AppContent() {
         <main>
           <Hero onFeatureClick={handleFeatureClick} />
           <IntelligentSolutions onFeatureClick={handleFeatureClick} />
+          <EmployeeLifecycle onFeatureClick={handleFeatureClick} />
           <KeyBenefits onFeatureClick={handleFeatureClick} />
           <ProductFeatures onFeatureClick={handleFeatureClick} />
-          <EmployeeLifecycle onFeatureClick={handleFeatureClick} />
           <Personas onFeatureClick={handleFeatureClick} />
           <AboutUs onFeatureClick={handleFeatureClick} />
         </main>

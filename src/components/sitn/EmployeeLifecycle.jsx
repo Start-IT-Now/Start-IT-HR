@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Search, UserPlus, Heart, BarChart, LogOut } from 'lucide-react';
 
+
 const stages = [
-  { icon: Search, title: "Recruitment", description: "AI-powered sourcing & screening" },
+  { icon: Search, title: "Recruitment", description: "AI-powered screening & Qualifying" },
   { icon: UserPlus, title: "Onboarding", description: "Automated documentation & training" },
   { icon: Heart, title: "Engagement", description: "24/7 support with My Buddy" },
   { icon: BarChart, title: "Performance", description: "Real-time tracking & analytics" },
@@ -12,9 +13,11 @@ const stages = [
 
 const EmployeeLifecycle = ({ onFeatureClick }) => {
   return (
-    <section className="py-4 md:py-6 bg-white">
+       <section className="relative py-20 md:py-32 text-center overflow-hidden bg-white">
+
+    <section className="py-4 md:py-6 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title" style={{color: '#04060dff'}}>Employee Lifecycle Automation</h2>
+        <h2 className="section-title" style={{color: '#0c0c0cff'}}>Employee Lifecycle Automation</h2>
         <div className="section-title-underline"></div>
 
         <div className="relative mt-12">
@@ -47,6 +50,7 @@ const EmployeeLifecycle = ({ onFeatureClick }) => {
           </div>
         </div>
       </div>
+    </section>
     </section>
   );
 };

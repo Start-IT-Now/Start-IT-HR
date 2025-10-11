@@ -6,12 +6,12 @@ const solutions = [
   {
     icon: BrainCircuit,
     title: "Talent Sift (AI)",
-    description: "Harness AI to streamline and enhance your talent acquisition and resume screening processes."
+    description: "Resume screening and Talent Acquisition process automation"
   },
   {
     icon: Bot,
     title: "My Buddy",
-    description: "Boost productivity with a smart chat assistant that supports your team anytime."
+    description: "Boost productivity with a smart assistant that supports and resolves employee queries instantly."
   },
   {
     icon: Zap,

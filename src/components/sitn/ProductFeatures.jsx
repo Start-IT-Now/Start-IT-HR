@@ -4,7 +4,7 @@ import { Users, FileText, Bot, Settings, LineChart, Link, Smartphone, Shield } f
 
 const features = [
   { icon: Users, title: "Multi-Agent Orchestration", description: "3 specialized AI agents working together seamlessly" },
-  { icon: FileText, title: "Resume Parsing", description: "Bias-free semantic analysis with 95% accuracy" },
+  { icon: FileText, title: "Resume Parsing", description: "Bias-free context based analysis with 95% accuracy" },
   { icon: Bot, title: "Employee Engagement", description: "Dedicated 'My Buddy' conversational AI agent" },
   { icon: Settings, title: "Workflow Automation", description: "No-code customization for all HR processes" },
   { icon: LineChart, title: "Real-time Analytics", description: "Predictive insights and performance tracking" },

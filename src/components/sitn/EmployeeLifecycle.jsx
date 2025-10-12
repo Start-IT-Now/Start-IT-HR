@@ -13,7 +13,7 @@ const stages = [
 
 const EmployeeLifecycle = ({ onFeatureClick }) => {
   return (
-       <section className="relative py-20 md:py-32 text-center overflow-hidden bg-white">
+       <section className="relative py-4 md:py-6 text-center overflow-hidden bg-white">
 
     <section className="py-4 md:py-6 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

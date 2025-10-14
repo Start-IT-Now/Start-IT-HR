@@ -6,7 +6,7 @@ const solutions = [
   {
     icon: BrainCircuit,
     title: "Talent Sift (AI)",
-    description: "Resume screening and Talent Acquisition process automation"
+    description: "AI agents designed for industry specific resume screening and qualification."
   },
   {
     icon: Bot,
@@ -16,7 +16,7 @@ const solutions = [
   {
     icon: Zap,
     title: "Easy Automate",
-    description: "Automate hiring, onboarding, and offboarding for a seamless HR experience."
+    description: "Streamline operations with low code automation - Resilient, Transparent and Tailored for every user."
   }
 ];
 

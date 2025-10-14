@@ -29,7 +29,7 @@ const Hero = () => {
 
           {/* Partner logos */}
           <span className="text-xl font-semibold flex items-center gap-4 mt-12">
-            Powered by:
+            Workflows Powered by:
             <motion.img
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import zoho from '../ZOHO QNTRL.png';
+import SN from '../SN Logo.png';
 
 const AboutUs = ({ onFeatureClick }) => {
   const [expanded, setExpanded] = useState(false);
@@ -18,47 +20,43 @@ const AboutUs = ({ onFeatureClick }) => {
         viewport={{ once: true }}
         className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl"
       >
-        <h2 className="section-title text-center text-black !text-black">About Us</h2>
+        <h2 className="section-title text-center text-black !text-black">Integrations</h2>
         <div className="section-title-underline mx-auto mb-6"></div>
 
         <div className="text-gray-700 ">
           <div>
-            <h3 className="text-3xl font-bold text-[#0B0F29]/90">
-              Empowering Business Transformation with Start IT Now
-            </h3>
+
             <p>
-              At Start IT Now, we enable organizations to excel in today's fast-paced digital environment through advanced business process automation and Agentic AI solutions. Our expertise helps clients streamline operations and elevate customer engagement, fostering meaningful transformation across industries.
+             
+The AI agents integrates with leading productivity and collaboration apps so your team spends less time on time-consuming tasks.
             </p>
           </div>
-
-          <div
-            className={`overflow-hidden transition-all duration-500 ${
-              expanded ? 'max-h-full' : 'max-h-[20px]'
-            }`}
-          >
-            <h3 className="text-2xl font-bold text-[#0B0F29]/90 mt-1">Innovation as a Cornerstone</h3>
-            <p>
-              We prioritize innovation, delivering customized solutions that consistently exceed client expectations. Our approach ensures every offering is deeply aligned with unique business needs, guaranteeing optimal adoption and satisfaction.
-            </p>
-
-            <h3 className="text-2xl font-bold text-[#0B0F29]/90 mt-1">Strategic Growth Through Technology</h3>
-            <p>
-              Through strong strategic partnerships and dedicated expert guidance, we cultivate environments where organizations thrive. We are committed to empowering our clients to embrace new technologies, optimize performance, and future-proof their operations.
-            </p>
-          </div>
-
-          <Button
-            variant="link"
-            className="text-[#0B0F29]/90 text-lg"
-            onClick={toggleReadMore}
-          >
-            {expanded ? 'Read Less' : 'Read More...'}
-          </Button>
 
           <p className="text-lg font-semibold">
             Choose Start IT Now and unlock new opportunities for growth, resilience, and technological advancement.
           </p>
+     <div className="mt-4">
+  <span className="text-xl font-semibold flex items-center gap-8 mt-12">
+    <motion.img
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.6 }}
+      src={zoho}
+      alt="Zoho"
+      className="h-16 md:h-20 w-auto inline-block"
+    />
+    <motion.img
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.8 }}
+      src={SN}
+      alt="ServiceNow"
+      className="h-16 md:h-20 w-auto inline-block"
+    />
+  </span>
+</div>
         </div>
+
       </motion.div>
     </section>
   );

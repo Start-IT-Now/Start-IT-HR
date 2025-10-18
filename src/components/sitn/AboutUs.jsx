@@ -12,7 +12,7 @@ const AboutUs = ({ onFeatureClick }) => {
   };
 
   return (
-    <section id="about" className="py-4 md:py-6 bg-white scroll-mt-20">
+    <section id="integrations" className="py-4 md:py-6 bg-white scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,23 +23,26 @@ const AboutUs = ({ onFeatureClick }) => {
         <h2 className="section-title text-center text-black !text-black">Integrations</h2>
         <div className="section-title-underline mx-auto mb-6"></div>
 
-        <div className="text-gray-700 ">
-          <div>
+{/* 🟢 Paragraph + Logos Side-by-Side */}
+<div className="flex flex-col md:flex-row items-center justify-between text-gray-700 gap-8">
+  
+  {/* 🟩 Left Side - Paragraph */}
+  <div className="md:w-1/2">
+    <p className="text-lg leading-relaxed">
+      The AI agents integrate with leading productivity and collaboration apps so
+      your team spends less time on time-consuming tasks.
+    </p>
+  </div>
 
-            <p>
-             
-The AI agents integrates with leading productivity and collaboration apps so your team spends less time on time-consuming tasks.
-            </p>
-
-               <div className="mt-4">
-  <span className="text-xl font-semibold flex items-center gap-8 mt-4 mb-6">
+  {/* 🟦 Right Side - Logos */}
+  <div className="md:w-1/2 flex items-center justify-center gap-8 mt-6 md:mt-0">
     <motion.img
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.6 }}
       src={zoho}
       alt="Zoho"
-      className="h-16 md:h-20 w-auto inline-block"
+      className="h-16 md:h-20 w-auto"
     />
     <motion.img
       initial={{ opacity: 0 }}
@@ -47,17 +50,16 @@ The AI agents integrates with leading productivity and collaboration apps so you
       transition={{ duration: 1, delay: 0.8 }}
       src={SN}
       alt="ServiceNow"
-      className="h-16 md:h-20 w-auto inline-block"
+      className="h-16 md:h-20 w-auto"
     />
-  </span>
+  </div>
 </div>
 
-          </div>
-
-          <p className="text-lg font-semibold">
-            Choose Start IT Now and unlock new opportunities for growth, resilience, and technological advancement.
-          </p>
-        </div>
+<div className="mt-8 text-gray-800">
+  <p className="text-lg font-semibold text-center md:text-left">
+    Choose Start IT Now and unlock new opportunities for growth, resilience, and technological advancement.
+  </p>
+</div>
 
       </motion.div>
     </section>

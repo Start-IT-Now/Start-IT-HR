@@ -41,7 +41,7 @@ const Hero = () => {
           </span>
 
           <div className="text-xl font-semibold flex items-center gap-4 mt-8"> 
-            <a href="mailto:Connect@startitnow.co.in" className="text-blue-400 underline">Connect@startitnow.co.in</a>
+            <a href="mailto:Connect@startitnow.co.in" className="text-blue-400 underline">connect@startitnow.co.in</a>
             <a href="tel:+918431403016" className="text-blue-400 underline">+91 8431403016</a>
           </div>
            </motion.div>

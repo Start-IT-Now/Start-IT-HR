@@ -8,7 +8,7 @@ const Header = ({ onFeatureClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const navItems = ['Solutions', 'Benefits', 'Features', 'About'];
+  const navItems = ['Solutions', 'Benefits', 'Features', 'Integrations'];
 
   const handleNavClick = (e, targetId) => {
     e.preventDefault();

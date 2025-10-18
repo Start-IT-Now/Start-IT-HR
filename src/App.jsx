@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react"
 
 import Header from "@/components/sitn/Header";
 import Hero from "@/components/sitn/Hero";
@@ -10,7 +11,7 @@ import KeyBenefits from "@/components/sitn/KeyBenefits";
 import ProductFeatures from "@/components/sitn/ProductFeatures";
 import EmployeeLifecycle from "@/components/sitn/EmployeeLifecycle";
 import Personas from "@/components/sitn/Personas";
-import AboutUs from "@/components/sitn/AboutUs";
+import Integrations from "@/components/sitn/AboutUs";
 import Footer from "@/components/sitn/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -70,7 +71,7 @@ function AppContent() {
           <KeyBenefits onFeatureClick={handleFeatureClick} />
           <ProductFeatures onFeatureClick={handleFeatureClick} />
           <Personas onFeatureClick={handleFeatureClick} />
-          <AboutUs onFeatureClick={handleFeatureClick} />
+          <Integrations onFeatureClick={handleFeatureClick} />
         </main>
         <Footer onFeatureClick={handleFeatureClick} />
         <Toaster />
@@ -90,6 +91,7 @@ function App() {
         <GAListener>
           {/* 🔹 ApolloTracker runs globally once */}
           <ApolloTracker />
+          <Analytics />
           <Routes>
             <Route path="*" element={<AppContent />} />
           </Routes>

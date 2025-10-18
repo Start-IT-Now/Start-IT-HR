@@ -32,7 +32,7 @@ The AI agents integrates with leading productivity and collaboration apps so you
             </p>
 
                <div className="mt-4">
-  <span className="text-xl font-semibold flex items-center gap-8 mt-12">
+  <span className="text-xl font-semibold flex items-center gap-8 mt-4 mb-6">
     <motion.img
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

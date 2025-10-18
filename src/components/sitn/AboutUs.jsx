@@ -32,10 +32,7 @@ The AI agents integrates with leading productivity and collaboration apps so you
             </p>
           </div>
 
-          <p className="text-lg font-semibold">
-            Choose Start IT Now and unlock new opportunities for growth, resilience, and technological advancement.
-          </p>
-     <div className="mt-4">
+               <div className="mt-4">
   <span className="text-xl font-semibold flex items-center gap-8 mt-12">
     <motion.img
       initial={{ opacity: 0 }}
@@ -55,6 +52,11 @@ The AI agents integrates with leading productivity and collaboration apps so you
     />
   </span>
 </div>
+
+
+          <p className="text-lg font-semibold">
+            Choose Start IT Now and unlock new opportunities for growth, resilience, and technological advancement.
+          </p>
         </div>
 
       </motion.div>

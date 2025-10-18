@@ -30,7 +30,6 @@ const AboutUs = ({ onFeatureClick }) => {
              
 The AI agents integrates with leading productivity and collaboration apps so your team spends less time on time-consuming tasks.
             </p>
-          </div>
 
                <div className="mt-4">
   <span className="text-xl font-semibold flex items-center gap-8 mt-12">
@@ -53,6 +52,7 @@ The AI agents integrates with leading productivity and collaboration apps so you
   </span>
 </div>
 
+          </div>
 
           <p className="text-lg font-semibold">
             Choose Start IT Now and unlock new opportunities for growth, resilience, and technological advancement.

@@ -9,7 +9,7 @@ import logo from '../white-logo.png';
 
 const Footer = ({ onFeatureClick }) => {
   return (
-    <footer className="bg-[#0F1431] border-t border-[#1E2A5E] text-white pt-16 pb-8">
+    <footer className="bg-[#314755] text-white pt-10 pb-5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -17,7 +17,7 @@ const Footer = ({ onFeatureClick }) => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="text-lg text-gray-400 mb-6">
+          <p className="text-lg text-gray-300 mb-6">
             A trustable AI solution where your data remains safe.
           </p>
 
@@ -45,7 +45,7 @@ const Footer = ({ onFeatureClick }) => {
             </a>
           </div>
 
-<div className="flex justify-center items-center gap-2 mb-8 text-gray-400 mt-1">
+<div className="flex justify-center items-center gap-2 mb-8 text-gray-300 mt-1">
   <MapPin size={18} />
 
     Kaggadasapura Main Road, C V Raman Nagar,
@@ -76,7 +76,7 @@ const Footer = ({ onFeatureClick }) => {
             </Button>
           </div>
 
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Start IT Now. All rights reserved.
           </p>
         </motion.div>

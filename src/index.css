@@ -66,13 +66,13 @@ html {
 }
 
 .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center text-white mb-4;
+    @apply text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2 mt-2;
 }
 
 .section-title-underline {
-    @apply w-20 h-1 bg-[#67E8F9] mx-auto mb-12 rounded-full;
+    @apply w-20 h-1 bg-[#212529] mx-auto mb-4 rounded-full;
 }
 
 .info-card {
-    @apply bg-gradient-to-br from-[#1E2A5E] to-[#121A41] p-6 md:p-8 rounded-2xl shadow-lg border border-[#1E2A5E] transition-all duration-300 hover:scale-105 hover:shadow-[#67E8F9]/20 cursor-pointer;
+    @apply bg-white p-6 md:p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[#67E8F9]/20 cursor-pointer;
 }

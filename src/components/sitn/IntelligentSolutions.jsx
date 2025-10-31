@@ -1,20 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BrainCircuit, Bot, Zap } from 'lucide-react';
+import Lottie from 'lottie-react';
+
+// ✅ Import Lottie animations
+import aiBrain from '../AI animation.json';
+import chatbotBuddy from '../Live chatbot.json';
+import lightningAutomation from '../lightning bolt.json';
 
 const solutions = [
   {
-    icon: BrainCircuit,
+    animation: aiBrain,
     title: "Talent Sift (AI)",
     description: "AI agents designed for industry specific resume screening and qualification."
   },
   {
-    icon: Bot,
+    animation: chatbotBuddy,
     title: "My Buddy",
     description: "Boost productivity with a smart assistant that supports and resolves employee queries instantly."
   },
   {
-    icon: Zap,
+    animation: lightningAutomation,
     title: "Easy Automate",
     description: "Streamline operations with low code automation - Resilient, Transparent and Tailored for every user."
   }
@@ -34,9 +39,9 @@ const IntelligentSolutions = ({ onFeatureClick }) => {
   };
 
   return (
-    <section id="solutions" className="py-4 md:py-6 bg-white scroll-mt-20">
+    <section id="solutions" className="py-4 md:py-6 bg-gray-50 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title" style={{ color: 'black' }}>Our Intelligent Solutions</h2>
+        <h2 className="section-title" style={{ color: '#212529' }}>Our Intelligent Solutions</h2>
         <div className="section-title-underline"></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
@@ -51,12 +56,12 @@ const IntelligentSolutions = ({ onFeatureClick }) => {
               onClick={onFeatureClick}
             >
               <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 rounded-full bg-[#1E2A5E] flex items-center justify-center">
-                  <solution.icon className="w-10 h-10 text-[#67E8F9]" />
+                <div className="w-24 h-24 flex items-center justify-center overflow-hidden">
+                  <Lottie animationData={solution.animation} loop={true} style={{ width: 80, height: 80 }} />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
-              <p className="text-gray-300">{solution.description}</p>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">{solution.title}</h3>
+              <p className="text-gray-500">{solution.description}</p>
             </motion.div>
           ))}
         </div>

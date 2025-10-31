@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Search, UserPlus, Heart, BarChart, LogOut } from 'lucide-react';
-
+import pattern from '../pattern.png';
 
 const stages = [
   { icon: Search, title: "Recruitment", description: "AI-powered screening & Qualifying" },
@@ -13,16 +13,27 @@ const stages = [
 
 const EmployeeLifecycle = ({ onFeatureClick }) => {
   return (
-       <section className="relative py-4 md:py-6 text-center overflow-hidden bg-white">
+    <section className="relative py-16 text-center overflow-hidden ">
+      {/* ✅ Full background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={pattern}
+          alt="Background pattern"
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
 
-    <section className="py-4 md:py-6 ">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title" style={{color: '#0c0c0cff'}}>Employee Lifecycle Automation</h2>
-        <div className="section-title-underline"></div>
+      {/* Content container */}
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* ✅ Heading visible and clear */}
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 ">
+          Employee Lifecycle Automation
+        </h2>
+        <div className="mx-auto mb-10 h-1 w-24 bg-[#67E8F9] rounded-full"></div>
 
         <div className="relative mt-12">
           {/* horizontal line behind icons */}
-          <div className="hidden md:block absolute top-[86px] left-0 w-full h-0.5 bg-[#1E2A5E] z-0"></div>
+          <div className="hidden md:block absolute top-[86px] left-0 w-full h-0.5 bg-[#67E8F9]/30 z-0"></div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-0 relative z-10">
             {stages.map((stage, index) => (
@@ -36,21 +47,20 @@ const EmployeeLifecycle = ({ onFeatureClick }) => {
                 onClick={onFeatureClick}
               >
                 {/* Icon Circle */}
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#1E2A5E] to-[#121A41] border-2 border-[#1E2A5E] flex items-center justify-center mb-4 transition-all duration-300 group-hover:border-[#67E8F9] group-hover:scale-110">
-                  <stage.icon className="w-10 h-10 text-[#67E8F9]" />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#1E2A5E] to-[#121A41] border-2 border-[#67E8F9]/40 flex items-center justify-center mb-4 transition-all duration-300 group-hover:border-[#67E8F9] group-hover:scale-110 shadow-lg">
+                  <stage.icon className="w-10 h-10 text-white" />
                 </div>
 
-                {/* Title styled with the same color as icon background */}
-                <h3 className="font-bold text-lg mb-1 text-[#1E2A5E]">{stage.title}</h3>
+                {/* Title */}
+                <h3 className="font-bold text-lg mb-1 text-white">{stage.title}</h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm px-2">{stage.description}</p>
+                <p className="text-gray-300 text-sm px-2">{stage.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
-    </section>
     </section>
   );
 };

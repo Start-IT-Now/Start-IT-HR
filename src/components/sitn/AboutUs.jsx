@@ -12,7 +12,7 @@ const AboutUs = ({ onFeatureClick }) => {
   };
 
   return (
-    <section id="integrations" className="py-4 md:py-6 bg-white scroll-mt-20">
+    <section id="integrations" className="py-4 md:py-6 bg-gray-50 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const AboutUs = ({ onFeatureClick }) => {
         viewport={{ once: true }}
         className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl"
       >
-        <h2 className="section-title text-center text-black !text-black">Integrations</h2>
+        <h2 className="section-title text-center text-gray-800">Integrations</h2>
         <div className="section-title-underline mx-auto mb-6"></div>
 
 {/* 🟢 Paragraph + Logos Side-by-Side */}

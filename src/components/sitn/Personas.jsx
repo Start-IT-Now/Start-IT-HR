@@ -22,9 +22,9 @@ const Personas = ({ onFeatureClick }) => {
   };
 
   return (
-    <section className="py-4 md:py-6 bg-white ">
+    <section className="py-4 md:py-6 bg-gray-50 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title " style={{ color: 'black' }}>Benefits to Personas</h2>
+        <h2 className="section-title " style={{ color: '#212529' }}>Benefits to Personas</h2>
         <div className="section-title-underline"></div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {personas.map((persona, index) => (
@@ -38,8 +38,8 @@ const Personas = ({ onFeatureClick }) => {
               variants={cardVariants}
               onClick={onFeatureClick}
             >
-              <h3 className="text-xl font-bold mb-2">{persona.title}</h3>
-              <p className="text-gray-300">{persona.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-gray-800">{persona.title}</h3>
+              <p className="text-gray-500">{persona.description}</p>
             </motion.div>
           ))}
         </div>

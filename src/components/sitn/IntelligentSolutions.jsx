@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 
 // ✅ Import Lottie animations
-import aiBrain from '../AI animation.json';
-import chatbotBuddy from '../Live chatbot.json';
-import lightningAutomation from '../lightning bolt.json';
+import aiBrain from '../AIanimation.json';
+import chatbotBuddy from '../Livechatbot.json';
+import lightningAutomation from '../lightningbolt.json';
 
 const solutions = [
   {

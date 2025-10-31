@@ -5,7 +5,7 @@ import Lottie from 'lottie-react';
 // ✅ Import Lottie animations
 import aiBrain from '../AIanimation.json';
 import chatbotBuddy from '../Livechatbot.json';
-import lightningAutomation from '../lightningbolt.json';
+import lightningAutomation from '../Lightningbolt.json';
 
 const solutions = [
   {

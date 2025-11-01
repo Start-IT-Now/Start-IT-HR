@@ -9,7 +9,7 @@ import logo from '../white-logo.png';
 
 const Footer = ({ onFeatureClick }) => {
   return (
-    <footer className="bg-[#314755] text-white pt-10 pb-5">
+    <footer className="bg-[#314755] text-white pt-8 pb-4">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

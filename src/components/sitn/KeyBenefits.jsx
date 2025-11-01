@@ -30,7 +30,7 @@ const KeyBenefits = ({ onFeatureClick }) => {
   };
 
   return (
-    <section id="benefits" className="py-10 md:py-14 bg-gray-50 scroll-mt-20">
+    <section id="benefits" className="py-8 md:py-12 bg-gray-50 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title text-gray-800 text-center">Key Benefits</h2>
         <div className="section-title-underline"></div>

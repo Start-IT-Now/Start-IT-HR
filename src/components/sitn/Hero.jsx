@@ -5,7 +5,7 @@ import zoho from "../ZOHO QNTRL.png";
 
 const Hero = () => {
   return (
-    <section className="relative py-12 md:py-14 text-left overflow-hidden">
+    <section className="relative py-4 sm:py-6 md:py-8 lg:py-10 overflow-hidden">
       {/* Background Image */}
       <img
         src={bg}
@@ -13,38 +13,52 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/50 z-0" />
+
       {/* Foreground Content */}
-      <div className="relative z-10 px-6 sm:px-8 lg:px-12 flex justify-center items-center min-h-[50vh]">
+      <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-16 flex flex-col justify-center items-center min-h-[60vh] text-center">
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl md:max-w-5xl text-left"
+          className="max-w-3xl md:max-w-4xl"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Transform HR Workflows with AI Agents
           </h1>
-          <p className="text-lg md:text-xl text-white mb-8">
+
+          <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8">
             Simplify collaboration, speed up hiring, and empower your team with real-time insights.
           </p>
 
-          {/* Partner logos */}
-          <span className="text-xl font-semibold flex items-center gap-10 mt-8">
-            Workflows Powered by:
+          {/* Partner + Contact Row */}
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 text-white text-sm sm:text-base mt-4">
+            <span className="text-lg sm:text-xl font-semibold whitespace-nowrap">
+              Workflows Powered by:
+            </span>
             <motion.img
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
               src={zoho}
               alt="Zoho"
-              className="h-8 md:h-14 w-auto inline-block "
+              className="h-10 sm:h-12 md:h-14 w-auto"
             />
-            <div className="text-xl font-semibold flex items-center gap-20 mt-6"> 
-            <a href="mailto:Connect@startitnow.co.in" className="text-white underline"> Mail Id: connect@startitnow.co.in</a>
-            <a href="tel:+918431403016" className="text-white underline">Phone: +91 8431403016</a>
+            <a
+              href="mailto:connect@startitnow.co.in"
+              className="text-white underline hover:text-gray-200 whitespace-nowrap"
+            >
+              📧 connect@startitnow.co.in
+            </a>
+            <a
+              href="tel:+918431403016"
+              className="text-white underline hover:text-gray-200 whitespace-nowrap"
+            >
+              📞 +91 8431403016
+            </a>
           </div>
-          </span>
-           </motion.div>
+        </motion.div>
       </div>
     </section>
   );

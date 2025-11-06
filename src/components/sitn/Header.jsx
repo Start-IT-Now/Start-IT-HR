@@ -32,23 +32,28 @@ const Header = ({ onFeatureClick }) => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled ? 'bg-gray-100 border-b border-gray-200 shadow-sm' : 'bg-transparent'
-        
-        
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo as link button */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-<img
-  className="h-10 object-contain"
-  src={scrolled ? logo : whiteLogo}
-  alt="Start IT Now"
-/>
+            <a
+              href="https://startitnow.co.in/business-process-automation.php"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block focus:outline-none"
+            >
+              <img
+                className="h-10 object-contain"
+                src={scrolled ? logo : whiteLogo}
+                alt="Start IT Now"
+              />
+            </a>
           </motion.div>
 
           {/* Desktop Nav */}

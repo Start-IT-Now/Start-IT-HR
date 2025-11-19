@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import bg from "../bg.png";
 import zoho from "../ZOHO QNTRL.png";
+import SN from "../SN Logo.png";
 
 const Hero = () => {
   return (
@@ -33,31 +34,43 @@ const Hero = () => {
           </p>
 
           {/* Partner + Contact Row */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 text-white text-sm sm:text-base mt-4">
-            <span className="text-lg sm:text-xl font-semibold whitespace-nowrap">
-              Workflows Powered by:
-            </span>
-            <motion.img
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              src={zoho}
-              alt="Zoho"
-              className="h-10 sm:h-12 md:h-14 w-auto"
-            />
-            <a
-              href="mailto:connect@startitnow.co.in"
-              className="text-white underline hover:text-gray-200 whitespace-nowrap"
-            >
-              📧 connect@startitnow.co.in
-            </a>
-            <a
-              href="tel:+918431403016"
-              className="text-white underline hover:text-gray-200 whitespace-nowrap"
-            >
-              📞 +91 8431403016
-            </a>
-          </div>
+         <div className="flex flex-row flex-nowrap gap-4 sm:gap-8 text-white text-sm sm:text-base mt-4">
+  <span className="text-lg sm:text-xl font-semibold whitespace-nowrap">
+    Proven Compatible with workflows:
+  </span>
+
+  <motion.img
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1, delay: 0.6 }}
+    src={zoho}
+    alt="Zoho"
+    className="h-10 sm:h-12 md:h-12 w-auto shrink-0"
+  />
+
+  <motion.img
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1, delay: 0.6 }}
+    src={SN}
+    alt="ServiceNow"
+    className="h-10 md:h-12 w-auto shrink-0"
+  />
+
+  <a
+    href="mailto:connect@startitnow.co.in"
+    className="text-white underline hover:text-gray-200 whitespace-nowrap shrink-0"
+  >
+    📧 connect@startitnow.co.in
+  </a>
+
+  <a
+    href="tel:+918431403016"
+    className="text-white underline hover:text-gray-200 whitespace-nowrap shrink-0"
+  >
+    Ph: +91 8431403016
+  </a>
+</div>
         </motion.div>
       </div>
     </section>

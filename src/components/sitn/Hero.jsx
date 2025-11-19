@@ -34,8 +34,8 @@ const Hero = () => {
           </p>
 
           {/* Partner + Contact Row */}
-         <div className="flex flex-row flex-nowrap gap-4 sm:gap-8 text-white text-sm sm:text-base mt-4">
-  <span className="text-lg sm:text-xl font-semibold whitespace-nowrap">
+<div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 text-white text-sm mt-4">
+  <span className="text-lg md:text-xl font-semibold whitespace-nowrap">
     Proven Compatible with workflows:
   </span>
 
@@ -45,7 +45,7 @@ const Hero = () => {
     transition={{ duration: 1, delay: 0.6 }}
     src={zoho}
     alt="Zoho"
-    className="h-10 sm:h-12 md:h-12 w-auto shrink-0"
+    className="h-8 md:h-10 lg:h-12 w-auto flex-shrink-0"
   />
 
   <motion.img
@@ -54,23 +54,24 @@ const Hero = () => {
     transition={{ duration: 1, delay: 0.6 }}
     src={SN}
     alt="ServiceNow"
-    className="h-10 md:h-12 w-auto shrink-0"
+    className="h-8 md:h-10 lg:h-12 w-auto flex-shrink-0"
   />
 
   <a
     href="mailto:connect@startitnow.co.in"
-    className="text-white underline hover:text-gray-200 whitespace-nowrap shrink-0"
+    className="text-white underline hover:text-gray-200 truncate max-w-[220px] md:max-w-[300px]"
   >
     📧 connect@startitnow.co.in
   </a>
 
   <a
     href="tel:+918431403016"
-    className="text-white underline hover:text-gray-200 whitespace-nowrap shrink-0"
+    className="text-white underline hover:text-gray-200 whitespace-nowrap"
   >
     Ph: +91 8431403016
   </a>
 </div>
+
         </motion.div>
       </div>
     </section>
